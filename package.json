@@ -7,7 +7,7 @@
     "test": "jest",
     "cucumber": "cucumber-js"
   },
-  "author": "",
+  "author": "Baranov MS",
   "license": "ISC",
   "dependencies": {
     "jest": "^27.3.1",
