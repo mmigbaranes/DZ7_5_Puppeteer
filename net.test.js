@@ -1,20 +1,4 @@
-const { clickElement, putText, getText } = require("./lib/commands.js");
-// const { generateName } = require("./lib/util.js");
-
 const { expect } = require("chai");
-
-// let page;
-
-// beforeEach(async () => {
-//   page = await browser.newPage();
-//   await page.goto("https://qamid.tmweb.ru/client/index.php");
-//   // await page.setDefaultNavigationTimeout(0);
-// });
-
-// afterEach(() => {
-//   page.close();
-// });
-
 let page;
 
 beforeEach(async () => {
@@ -68,5 +52,4 @@ describe("Sad path servise ИДЁМ В КИНО", () => {
     const actual = await page.$eval(buttonText, link => link.textContent);
     expect(actual).equal('Стоимость: 1000 руб.');
   }, 25000);  
-  
 });
