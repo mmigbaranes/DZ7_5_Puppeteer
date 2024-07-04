@@ -1,4 +1,4 @@
-const { clickElement, putText, getText } = require("./lib/commands.js");
+const { clickElement, getText } = require("./lib/commands.js");
 
 const { expect } = require("chai");
 let page;

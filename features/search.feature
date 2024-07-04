@@ -1,5 +1,5 @@
-Feature: Search a course
-    Scenario: Should search by text
-        Given user is on "/navigation" page
-        When user search by "тестировщик"
-        Then user sees the course suggested "Тестировщик ПО"
+Feature: Buying a movie ticket
+    Scenario: Displaying ticket prices for the Mickey Mouse movie
+        Given user is on "/qamid.tmweb.ru/client/index.php" page
+        When user selects a film and seats in the cinema hall
+        Then user sees the price of tickets

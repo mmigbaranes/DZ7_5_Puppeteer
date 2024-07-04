@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 const chai = require("chai");
 const expect = chai.expect;
 const { Given, When, Then, Before, After } = require("cucumber");
-const { putText, getText } = require("../../lib/commands.js");
+const { getText, clickElement } = require("../../lib/commands.js");
 
 Before(async function () {
   const browser = await puppeteer.launch({ headless: false, slowMo: 50 });
@@ -18,12 +18,12 @@ After(async function () {
 });
 
 Given("user is on {string} page", async function (string) {
-  return await this.page.goto(`https://netology.ru${string}`, {
+  return await this.page.goto(`https://qamid.tmweb.ru/client/index.php${string}`, {
     setTimeout: 20000,
   });
 });
 
-When("user search by {string}", async function (string) {
+When("user selects a film and seats in the cinema hall{string}", async function (string) {
   return await putText(this.page, "input", string);
 });
 
