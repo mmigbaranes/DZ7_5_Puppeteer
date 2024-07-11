@@ -28,7 +28,7 @@ When("user selects a film and seats in the cinema hall{string}", async function 
 });
 
 Then("user sees the course suggested {string}", async function (string) {
-  const actual = await getText(this.page, "a[data-name]");
+  const actual = await getText(this.page, "body main p:nth-child(6)");
   const expected = await string;
   expect(actual).contains(expected);
 });
