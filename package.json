@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test1": "jest --watchAll --detectOpenHandles",
     "cucumber": "cucumber-js",
     "cucumber1":"cucumber-js --tags=@only"
   },

@@ -18,7 +18,7 @@ After(async function () {
 });
 
 Given("user is on {string} page", async function (string) {
-  return await this.page.goto(`https://qamid.tmweb.ru/client/index.php${string}`, {
+  return await this.page.goto(`https://qamid.tmweb.ru/client/index.php`, {
     setTimeout: 20000,
   });
 });
@@ -27,7 +27,7 @@ When("user selects a film and seats in the cinema hall", async function () {
   await this.page.click(".movie-seances__time[href='#'][data-seance-id='199']");
 });
 
-Then("user sees the price of tickets", async function (string) {
+Then("user sees the price of tickets", async function () {
   const actual = await getText(this.page, "body main p:nth-child(6)");
   const expected = await string;
   expect(actual).contains(expected);
